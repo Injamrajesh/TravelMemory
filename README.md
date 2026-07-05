@@ -79,13 +79,21 @@ Architecture Overview
 ┌──┴──┐ 
 ▼ ▼ [Backend EC2 #1] [Backend EC2 #2] (Node.js on port 3000, Nginx reverse proxy on 80) │ ▼ [MongoDB Atlas -- travelmemory cluster] (Cloud database, access whitelisted)```
 
+<img width="1250" height="614" alt="image" src="https://github.com/user-attachments/assets/5d0c64a3-1412-4b57-8702-dcbad8ff5bde" />
+
+
+<img width="1161" height="654" alt="image" src="https://github.com/user-attachments/assets/7676fd39-459e-4cf8-98e9-73c7736ccab1" />
+
+
+
  Instance Reference Table 
 
-Server
-Instance Name
-Public IP
-Private IP
-Zone
+Server 
+Instance Name rajesh_mern_backend
+Public IP  54.81.224.67
+Private IP  ip-172-31-18-132.ec2.internal
+Zone  us-east-1c
+
 
 Server
 Instance Name
@@ -103,12 +111,12 @@ Go to AWS Console → EC2 → Launch Instance:
 Setting                Value
 
 Instance Name           rajesh_mern_backend
-AMI                     Ubuntu Server 22.04 LTS (64-bit x86)
+AMI                     ubuntu/images/hvm-ssd-gp3/ubuntu-resolute-26.04-amd64-server-20260604
 Instance Type            t2.micro (Free Tier eligible)
 Key Pair                rajesh_key (create new if needed)
-Network                 Default VPC vpc-0c5a8881cff1146d8
+Network                 Default VPC vpc-037914ee3e978658d
 Auto-assign Public IP     Enable
-Security Group            Select existing: launch-wizard-46
+Security Group            Select existing: sg-0759c82584dc1a322
 
 
 
