@@ -136,11 +136,15 @@ nano .env
 Add these values to the .env file:
 MONGO_URI='mongodb+srv://rajesh_devops:SecurePass@123@travelmemory.cluster0.mongodb.net/travelmemory'
 PORT=3000
-Analogy: The .env file is like giving the kitchen staff a locked recipe book with the secret sauce formula (database credentials) and which window to serve from (PORT 3000). Never share this file publicly.
+Analogy: The .env file is like giving the kitchen staff a locked recipe book with the secret sauce formula (database credentials) and which window to serve from (PORT 3001). Never share this file publicly.
 Verify it was saved:
 cat .env
-# Should show: MONGO_URI='mongodb+srv://...' and PORT=3000
+# Should show: MONGO_URI='mongodb+srv://...' and PORT=3001
 
+```
+<img width="984" height="704" alt="image" src="https://github.com/user-attachments/assets/d44826ea-3bc0-461b-ab08-e661a33071d4" />
+
+```
 
 1.4 Install Dependencies and Start the Backend
 # Install all Node.js packages (like stocking the kitchen with ingredients)
@@ -149,8 +153,8 @@ npm install
 sudo node index.js
 Expected terminal output:
 Node.js v18.17.1
-Server started at http://localhost:3000
-Verify in browser: Open http://10.0.1.50:3000 You will see Cannot GET / — this is correct. It means the server is running but there's no route at /. The API routes (e.g., /trip , /hello) will respond properly.
+Server started at http://localhost:3001
+Verify in browser: Open http://10.0.1.50:3001 You will see Cannot GET / — this is correct. It means the server is running but there's no route at /. The API routes (e.g., /trip , /hello) will respond properly.
 
 
 1.5 Whitelist Backend IP in MongoDB Atlas
@@ -244,20 +248,18 @@ Local: http://localhost:3000
 On Your Network: http://172.31.12.91:3000
 webpack compiled successfully
 Verify: Open http://10.0.2.60:3000 in browser — you should see the Travel Memory application form.
+```
+<img width="1361" height="722" alt="image" src="https://github.com/user-attachments/assets/1610ffe7-d658-4d4c-85b1-4efdb815fcc9" />
+```
+```
+<img width="636" height="150" alt="image" src="https://github.com/user-attachments/assets/7ad5a583-b326-4365-af64-61fc0cedfa4c" />
 
+```
 
 2.4 Set Up Nginx Reverse Proxy on Frontend
 Same steps as backend. Nginx will forward port 80 → port 3000 (where React runs).
 
-sudo apt install nginx -y
 
-sudo unlink /etc/nginx/sites-enabled/default 
-cd /etc/nginx/sites-available/ 
-sudo nano custom_server.conf 
-server { listen 80; location / { proxy_pass http://localhost:3000; } } 
-sudo ln -s /etc/nginx/sites-available/custom_server.conf \ /etc/nginx/sites-enabled/custom_server.conf 
-sudo service nginx configtest 
-sudo service nginx restart
 
 Verify: Open http://10.0.2.60 — you should see the Travel Memory application running at port 80.
 
@@ -277,6 +279,30 @@ Task 4 — Domain Setup with Cloudflare
 4.1 Add DNS Records in Cloudflare
 Login to cloudflare.com → select domain rajeshdevops.in → DNS
 Add two CNAME records:
+
+
+```
+
+<img width="1217" height="605" alt="image" src="https://github.com/user-attachments/assets/70e1f35c-d3f2-4ed1-a1c6-926c4998bd0c" />
+```
+
+```
+<img width="1338" height="704" alt="image" src="https://github.com/user-attachments/assets/e8329ce8-79a5-43fe-b009-c5c70c91f435" />
+```
+
+```
+
+<img width="631" height="481" alt="image" src="https://github.com/user-attachments/assets/42323912-9826-4d24-a77a-047f5b65bf32" />
+```
+
+```
+<img width="1112" height="519" alt="image" src="https://github.com/user-attachments/assets/4d828a83-ab75-446b-95cc-28051af889a0" />
+```
+
+```
+
+<img width="1352" height="540" alt="image" src="https://github.com/user-attachments/assets/47519092-a8ff-460a-8177-f238cd1a9b55" />
+```
 
 
 Final Verification
