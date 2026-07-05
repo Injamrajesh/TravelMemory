@@ -62,7 +62,7 @@ In this deployment, we run the Frontend and Backend on separate EC2 servers, and
 Architecture Overview
 
 
-User's Browser 
+```User's Browser 
 │ 
 ▼
 [Cloudflare DNS] ←  (your custom domain)
@@ -77,10 +77,9 @@ User's Browser
 ▼ [Backend Load Balancer -- ALB] ←  (Cloudflare CNAME) 
 │ 
 ┌──┴──┐ 
-▼ ▼ [Backend EC2 #1] [Backend EC2 #2] (Node.js on port 3000, Nginx reverse proxy on 80) │ ▼ [MongoDB Atlas -- travelmemory cluster] (Cloud database, access whitelisted)
+▼ ▼ [Backend EC2 #1] [Backend EC2 #2] (Node.js on port 3000, Nginx reverse proxy on 80) │ ▼ [MongoDB Atlas -- travelmemory cluster] (Cloud database, access whitelisted)```
 
-
-Instance Reference Table
+ Instance Reference Table 
 
 Server
 Instance Name
