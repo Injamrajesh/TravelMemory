@@ -120,9 +120,6 @@ Security Group            Select existing: sg-0759c82584dc1a322
 
 
 
-1.2 User Data Script (Auto-setup on Boot)
-
-In the Advanced → User Data section, paste the following script. This script runs automatically when the server starts .
 
 
 1.3 Configure the Backend Environment
