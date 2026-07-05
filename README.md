@@ -78,9 +78,9 @@ Architecture Overview
 │ 
 ┌──┴──┐ 
 ▼ ▼ [Backend EC2 #1] [Backend EC2 #2] (Node.js on port 3000, Nginx reverse proxy on 80) │ ▼ [MongoDB Atlas -- travelmemory cluster] (Cloud database, access whitelisted)```
-
+```
 <img width="1250" height="614" alt="image" src="https://github.com/user-attachments/assets/5d0c64a3-1412-4b57-8702-dcbad8ff5bde" />
-
+```
 
 <img width="1161" height="654" alt="image" src="https://github.com/user-attachments/assets/7676fd39-459e-4cf8-98e9-73c7736ccab1" />
 
