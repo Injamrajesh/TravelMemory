@@ -126,13 +126,13 @@ In the Advanced → User Data section, paste the following script. This script r
 
 
 1.3 Configure the Backend Environment
-SSH into the backend instance and set up the .env file:
+``` SSH into the backend instance and set up the .env file:
 # SSH into your instance
-ssh -i rajesh_key.pem ubuntu@10.0.1.50
+``` ssh -i rajesh_key.pem ubuntu@10.0.1.50
 # Navigate to the backend folder
-cd /home/ubuntu/TravelMemory/backend
+``` cd /home/ubuntu/TravelMemory/backend
 # List files to confirm you're in the right place
-ls
+`` ls
 # Output: conn.js controllers index.js models package-lock.json package.json routes
 # Create the environment file
 nano .env
